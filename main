@@ -17,7 +17,7 @@ Sub AutomatingExcel()
     
     On Error GoTo 0
     
-    If Not xlApp Is Nothing Then MsgBox "Excel is running"
+    If Not xlApp Is Nothing Then MsgBox "Excel is running" ' replace this line with actual programme
     
     If blnXL = False Then
         xlApp.Quit
