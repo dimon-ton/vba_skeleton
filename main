@@ -1,0 +1,28 @@
+Sub AutomatingExcel()
+    Dim xlApp As Excel.Application
+    Dim blnXL As Boolean
+    
+    ' Launch Excel if necessary
+    blnXL = True
+    On Error Resume Next
+    
+    Set xlApp = GetObject(class:="Excel.Application")
+    
+    If Err.Number <> 0 Then
+        blnXL = False
+        Set xlApp = New Excel.Application
+        Err.Clear
+    End If
+    
+    On Error GoTo 0
+    
+    If Not xlApp Is Nothing Then MsgBox "Excel is running"
+    
+    If blnXL = False Then
+        xlApp.Quit
+    End If
+    
+    ' Destroy application variables
+    Set xlApp = Nothing
+    
+End Sub
