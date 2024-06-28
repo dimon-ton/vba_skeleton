@@ -1,3 +1,4 @@
+' Assume that you are using ms Word to integrate ms excel to use in ms word.
 Sub AutomatingExcel()
     Dim xlApp As Excel.Application
     Dim blnXL As Boolean
